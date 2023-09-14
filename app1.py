@@ -18,7 +18,7 @@ LoanAmount,
 Loan_Amount_Term,
 Credit_History,
 Property_Area):
-kbn={
+  kbn={
   Gender:[Gender],
   Married:[Married],
   Dependents:[Dependents],
