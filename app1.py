@@ -59,7 +59,7 @@ df=return_df(Gender,
              Loan_Amount_Term,
              Credit_History,
              Property_Area)
-if st.button(Submit):
+if st.button('Submit'):
   model=base_model()
   preds=model.predict(df)
   predictions=preds[0]
