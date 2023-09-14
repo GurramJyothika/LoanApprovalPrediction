@@ -38,7 +38,7 @@ def return_df(Gender,
                   return bmodel
 st.markdown(heading_style, unsafe_allow_html=True)
 Gender=st.selectbox('Select your gender',['Male','Female'])
-Married=st.selectbox('Married ?',[Yes,No])
+Married=st.selectbox('Married ?',['Yes','No'])
 Dependents=st.slider('Dependents',0,3,0)
 Education=st.selectbox(Ed,['Graduate','Not Graduate'])
 Self_Employed=st.selectbox('self',['Yes','No'])
