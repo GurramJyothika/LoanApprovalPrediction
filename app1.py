@@ -29,7 +29,7 @@ Property_Area):
   LoanAmount:[LoanAmount],
   Loan_Amount_Term:[Loan_Amount_Term],
   Credit_History:[Credit_History],
-  Property_Area&:[Property_Area]
+  Property_Area:[Property_Area]
 }
 final_df=pd.DataFrame(kbn)
 return final_df
