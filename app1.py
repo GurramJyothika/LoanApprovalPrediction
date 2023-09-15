@@ -65,5 +65,5 @@ if st.button('Submit'):
   predictions=preds[0]
   if predictions==Y:    
     st.write('Approved')
-  elif predictions==N:
+  elif predictions==N:   
     st.write('Not Approved')
