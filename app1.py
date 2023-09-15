@@ -64,6 +64,6 @@ if st.button('Submit'):
       preds=model.predict(df)
       predictions=preds[0]
   if predictions=='Y':
-    st.write('Approved')
+          st.write('Approved')
   elif predictions=='N':
-    st.write('Not Approved')
+          st.write('Not Approved')
