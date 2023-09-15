@@ -60,10 +60,10 @@ df=return_df(Gender,
              Credit_History,
              Property_Area)
 if st.button('Submit'):
-      model=base_model()
-      preds=model.predict(df)
-      predictions=preds[0]
-  if predictions=='Y':
-          st.write('Approved')
-  elif predictions=='N':
-          st.write('Not Approved')
+     model=base_model()
+	preds=model.predict(df)
+	predictions=preds[0]
+	if predictions=='Y':
+		st.write('Approved')
+	elif predictions=='N':
+		st.write('Not Approved')
