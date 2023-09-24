@@ -34,8 +34,6 @@ def return_df(Gender,
     }   
     final_df=pd.DataFrame(kbn)
     return final_df
-
-
 def base_model():
     bmodel=jb.load(os.path.join('finalised_rf_model.pkl'))
     return bmodel
