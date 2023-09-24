@@ -34,8 +34,10 @@ def return_df(Gender,
     }   
     final_df=pd.DataFrame(kbn)
     return final_df
+
+
 def base_model():
-    bmodel=jb.load(os.path.join('finalize rf model.pkl'))
+    bmodel=jb.load(os.path.join('finalised_rf_model.pkls'))
     return bmodel
 
 st.markdown(heading_style, unsafe_allow_html=True)
@@ -69,3 +71,4 @@ if st.button('Submit'):
 		st.write('Approved')
 	elif predictions=='N':
 		st.write('Not Approved')
+
