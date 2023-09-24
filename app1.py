@@ -1,9 +1,10 @@
+
 import streamlit as st
 import os
 import pandas as pd
 import joblib as jb
 heading_style='''
-<div style="color.red;"align='center'>
+<div style="color:red;"align='center'>
 <h1>Loan Amount Prediction System</h1>
 </div>
 '''
@@ -19,23 +20,23 @@ def return_df(Gender,
               Credit_History,
               Property_Area):
                 kbn={
-                  Gender:[Gender],
-                  Married:[Married],
-                  Dependents:[Dependents],
-                  Education:[Education],
-                  Self_Employed:[Self_Employed],
-                  ApplicantIncome:[ApplicantIncome],
-                  CoapplicantIncome:[CoapplicantIncome],
-                  LoanAmount:[LoanAmount],
-                  Loan_Amount_Term:[Loan_Amount_Term],
-                  Credit_History:[Credit_History],
-                  Property_Area:[Property_Area]
+                  'Gender':[Gender],
+                  'Married':[Married],
+                  'Dependents':[Dependents],
+                  'Education':[Education],
+                  'Self_Employed':[Self_Employed],
+                  'ApplicantIncome':[ApplicantIncome],
+                  'CoapplicantIncome':[CoapplicantIncome],
+                  'LoanAmount':[LoanAmount],
+                  'Loan_Amount_Term':[Loan_Amount_Term],
+                  'Credit_History':[Credit_History],
+                  'Property_Area':[Property_Area]
                 }
                 final_df=pd.DataFrame(kbn)
                 return final_df
-                def base_model():
-                  bmodel=jb.load(os.path.join(finalised_rf_model.pkl))
-                  return bmodel
+def base_model():
+	bmodel=jb.load(os.path.join(finalised_rf_model.pkl))
+	return bmodel
 st.markdown(heading_style, unsafe_allow_html=True)
 Gender=st.selectbox('Select your gender',['Male','Female'])
 Married=st.selectbox('Married ?',['Yes','No'])
@@ -49,13 +50,13 @@ Loan_Amount_Term=st.number_input('lmt',min_value=0)
 Credit_History=st.slider('creh',0,1,0)
 Property_Area=st.selectbox('property',['Urban','Rural','Semiurban'])
 df=return_df(Gender,
-             Married,
-             Dependents,
-             Education,
-             Self_Employed,
-             ApplicantIncome,
-             CoapplicantIncome,
-             LoanAmount,
+	     Married,
+	     Dependents,
+	     Education,
+	     Self_Employed,
+	     ApplicantIncome,
+	     CoapplicantIncome,
+	     LoanAmount,
              Loan_Amount_Term,
              Credit_History,
              Property_Area)
