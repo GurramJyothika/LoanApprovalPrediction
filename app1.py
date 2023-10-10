@@ -34,12 +34,9 @@ def return_df(Gender,
     }   
     final_df=pd.DataFrame(kbn)
     return final_df
-
-
 def base_model():
-    bmodel=jb.load(os.path.join('finalize rf model.pkl'))
+    bmodel=jb.load(os.path.join('finalize _rf_model.pkl'))
     return bmodel
-
 st.markdown(heading_style, unsafe_allow_html=True)
 Gender=st.selectbox('Select your gender',['Male','Female'])
 Married=st.selectbox('Married ?',['Yes','No'])
