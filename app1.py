@@ -37,7 +37,7 @@ def return_df(Gender,
 
 
 def base_model():
-    bmodel=jb.load(os.path.join('finalised_rf_model.pkls'))
+    bmodel=jb.load(os.path.join('finalised_rf_model.pkl'))
     return bmodel
 
 st.markdown(heading_style, unsafe_allow_html=True)
@@ -71,4 +71,3 @@ if st.button('Submit'):
 		st.write('Approved')
 	elif predictions=='N':
 		st.write('Not Approved')
-
